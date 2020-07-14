@@ -159,7 +159,7 @@ header
 {
     color:var(--sec-font-colour);
 }
-.welcome
+.welcome,.about
 {
     width:100%;
     max-width:100%;
@@ -695,5 +695,129 @@ footer
     {
         opacity:0;
         transform:translateY(-0.6rem);
+    }
+}
+
+/*PAGES*/
+
+/*ABOUT*/
+.about
+{
+    background-image: url(photos/about.jpg);
+    height:70vh;
+}
+.about .line
+{
+    max-width:4rem;
+}
+.explore p,.teams p
+{
+    padding-top:3.9rem;
+}
+.clients
+{
+    background-image: url("photos/client.jpg");
+    background-size:cover;
+    background-position: center center;
+}
+
+.review-container {
+    position: relative;
+    margin: auto;
+  }
+  
+  .myReviews {
+    display: none;
+  }
+  .myReviews img
+  {
+      height:300px;
+  }
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #B8D5E6;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  .text,.text-2 {
+    color:white;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  .text-2
+  {
+      color:black;
+      font-weight: bold;
+  }
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  .team 
+  {
+      background-image:url(photos/team.jpg) ;
+      background-position: center center;
+      background-size:cover;
+  }
+  .teams img
+  {
+      cursor: pointer;
+  }
+  .teams img:hover
+  {
+  }
+
+
+@media screen and (min-width: 900px)
+{
+    .padding-left
+    {
+        padding-left: 3rem;
+    }
+    .review-container
+    {
+        width:60%;
+        height:auto;
     }
 }
