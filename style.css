@@ -159,7 +159,7 @@ header
 {
     color:var(--sec-font-colour);
 }
-.welcome,.about
+.welcome,.about,.packages,.gallery,.contact-header
 {
     width:100%;
     max-width:100%;
@@ -211,7 +211,7 @@ header
 .line
 {
     width:100%;
-    max-width:6.3rem;
+    max-width:7rem;
     height:0.25rem;
     background-color:#041038;
     position:relative;
@@ -768,7 +768,8 @@ footer
       color:black;
       font-weight: bold;
   }
-  .dot {
+  .dot 
+  {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -779,17 +780,19 @@ footer
     transition: background-color 0.6s ease;
   }
   
-  .active, .dot:hover {
+  .active-1,.dot:hover {
     background-color: #717171;
   }
-  .fade {
+  .fade 
+  {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
   }
   
-  @keyframes fade {
+  @keyframes fade 
+  {
     from {opacity: .4}
     to {opacity: 1}
   }
@@ -804,10 +807,6 @@ footer
   {
       cursor: pointer;
   }
-  .teams img:hover
-  {
-  }
-
 
 @media screen and (min-width: 900px)
 {
@@ -820,4 +819,269 @@ footer
         width:60%;
         height:auto;
     }
+    .about .line
+    {
+        max-width:7.5rem;
+    }
+}
+/*TREKS*/
+
+.packages
+{
+    background-image: url(photos/packages.jpg);
+    height:70vh;
+}
+.packages .line
+{
+    max-width:2.7rem ;
+}
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {margin: 2rem -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+  
+  /* Responsive columns - one column layout (vertical) on small screens */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 50%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  .trek-package
+  {
+      padding-bottom:0;
+  }
+  .packages .line
+  {
+      max-width:2.3rem;
+  }
+  @media screen and (min-width: 900px) 
+  {
+    .packages .line
+    {
+        max-width:5.3rem;
+    }
+  }
+  .card img
+  {
+      cursor: pointer;
+  }
+  .card img:hover
+  {
+    animation:fadeDown 0.5s forwards;
+  }
+
+  .card i
+  {
+      font-size:2rem;
+      padding:1rem;
+      color:var(--sec-font-colour);
+  }
+  .feature-text h2
+  {
+      margin-bottom:1rem;
+      color:var(--main-font-colour);
+      font-size: 1.2rem;
+      text-transform:uppercase;
+  }
+
+  .book
+  {
+      background-image: url("photos/book.webp");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      margin-bottom:3.9rem;
+  }
+
+  /*GALLERY*/
+  .gallery
+  {
+      height: 70vh;
+      background-image:url("photos/gallery.jpg");
+      background-size: cover;
+      background-position: center center;
+  }
+  .photo-row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 0.25rem;
+  }
+  .photo-grid
+  {
+      padding-bottom: 0;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .photo-column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 0.25rem;
+  }
+  
+  .photo-column img {
+    margin-top:1rem;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .photo-column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+.gallery .line
+{
+    max-width:4rem;
+}
+@media screen and (min-width: 900px) 
+{
+    .gallery .line
+{
+    max-width:7rem;
+}
+}
+/*CONTACT*/
+
+.contact-header
+{
+    height:70vh;
+    background-image: url("photos/contact-header.jpeg");
+}
+.contact-header .line
+{
+    max-width:5rem;
+}
+
+@media screen and (min-width: 900px) 
+{
+    .contact-header .line
+    {
+        max-width:9.5rem;
+    }
+}
+.contact .company-info .contact-data,.contact .company-info .contact-form
+{
+    text-align:left;
+}
+.contact .company-info .contact-data p
+{
+    padding-bottom:2rem;
+    border-bottom:1px solid var(--body-font-colour);
+}
+.contact-form input[type=text],input[type=email], textarea
+{
+    width: 100%;
+    padding:0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+.contact-form input:focus
+{
+    outline:none;
+}
+.contact-form label 
+{
+    padding:0.5rem 0.5rem 0.5rem 0;
+    display: inline-block;
+    font-size:1.2rem;
+}
+  input[type=submit] {
+    background-color: var(--sec-font-colour);
+    color:white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+  }
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top:2rem;
+  }
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 2rem;
+  }
+  .contact-form .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  #map 
+  {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+  }
+  .contact
+  {
+      padding-bottom:0;
+  }
+  .let-us-meet
+  {
+    background-image: url("photos/meet.webp");
+    background-size: cover;
+    background-position: center;
+}
+.connect-social
+    {
+      background-image: url("photos/connect-social.jpeg");
+      background-size: cover;
+      margin-bottom:3.9rem;
+    }
+.connect-social .social-icons
+{
+    display:flex;
+    justify-content: center;
+    margin-top:2rem;
+}
+.connect-social .social-icons i
+{
+    font-size:2rem;
+    color:white;
+    padding:1.2rem;
+    opacity:1;
+    transition:color .5s;
+}
+.connect-social .social-icons i:hover
+{
+    color:var(--sec-font-colour);
 }

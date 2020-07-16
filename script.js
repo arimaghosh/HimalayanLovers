@@ -39,7 +39,6 @@ sr.reveal('.animate-bottom',
     distance:'20rem',
     delay:400
 });
-
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -63,8 +62,8 @@ function showSlides(n) {
       slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+      dots[i].className = dots[i].className.replace(" active-1", "");
   }
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  dots[slideIndex-1].className += " active-1";
 }
